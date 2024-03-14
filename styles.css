@@ -91,3 +91,18 @@ nav{
     margin-bottom: 1vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
+td, th{
+    border: solid #000;
+  text-align: left;
+  padding: .7vw;
+  margin:0;
+  font-size: .9vw;
+}
+table {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    align-items: center;
+    margin-left:14%;
+    margin-right: 14%;
+  }

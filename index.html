@@ -56,7 +56,7 @@
             </p>
             <h3>Time to First Click</h3>
             <p>
-                I chose time to first click as my third metric since this can indicate how intuitive your site is on its initial load. Additionally, this can be an interesting metric to compare to the mislick rate and provide a lot more information. If both time to first click is high and mislick rate then it would suggest that the wrong button is the intuitive first move, however, other variations could provide other suggestions about what fixes are needed. 
+                I chose time to first click as my third metric since this can indicate how intuitive your site is on its initial load. Additionally, this can be an interesting metric to compare to the misclick rate and provide a lot more information. If both time to first click is high and misclick rate then it would suggest that the wrong button is the intuitive first move, however, other variations could provide other suggestions about what fixes are needed. 
                 <br><br>
                 <b>Null Hypothesis: </b>There is no difference between the time to first click on page A and page B
                 <br><br>
@@ -75,43 +75,90 @@
                 <br><br>
                 <b>P-Value: </b>0.003
                 <br><br>
-                <b>Analysis: </b> This statistical analysis supported my initial prediction and made me confident that page B had a significantly lower misclick rate. Since the p-value was less than .005, it is statistically significant and allows us to reject the null hypothesis in favor of the alternate hypthesis. Since the calculated misclick rate is 50% for site A and only 11% for site B, suggesting that not only is there a statistical difference between the two site, but that site A has a high misclick rate. The chi-squared value of 8.7912 supports a highest magnitude of deviation which also supports the theory that there is a significant difference between the frequencies on the two sites. <br>All together this allows us to reject the null hypothesis in favor of the alternate one, additionally suggesting that the mislick rate of page A is higher than page B. 
+                <b>Misclick Rate A: </b>0.5
+                <br><br><b>Misclick Rate B: </b>0.11
+                <br><br>
+                <b>Analysis: </b> This statistical analysis supported my initial prediction and made me confident that page B had a significantly lower misclick rate. Since the p-value was less than .005, it is statistically significant and allows us to reject the null hypothesis in favor of the alternate hypthesis. Since the calculated misclick rate is 50% for site A and only 11% for site B, suggesting that not only is there a statistical difference between the two site, but that site A has a high misclick rate. The chi-squared value of 8.7912 supports a highest magnitude of deviation which also supports the theory that there is a significant difference between the frequencies on the two sites. <br>All together this allows us to reject the null hypothesis in favor of the alternate one, additionally suggesting that the misclick rate of page A is higher than page B. This indicates that the changes between page A and B led to a reduction in the misclick rate. 
             </p>
             <h3>Time on Page</h3>
             <p>
                 I used a one-tailed t-test to analyze the difference between time on site A and site B because time is a continuous variable and my alternative hypothesis was that time on B would be smaller. Therefore, since I wasn't just looking at if the two were different, I was also testing if one was smaller, so the one-tailed test made the most sense.
                 <br><br>
-                <b>Avg(A):  </b>9,164.615 milliseconds
+                <b>Avg(A):  </b>36,139.458 milliseconds
                 <br><br>
-                <b>Avg(B): </b>3,6139.458 milliseconds
+                <b>Avg(B): </b>9,164.615 milliseconds
                 <br><br>
-                <b>Variance(A):  </b>10,093,158.01
+                <b>Std(A): </b>14,570.9 milliseconds
                 <br><br>
-                <b>Variance(B): </b>212,313,712.7
+                <b>Std(B):  </b>3,176.9 milliseconds
                 <br><br>
                 <b>T-Score:  </b>-8.8766
                 <br><br>
                 <b>P-value (B less than A): </b>0.0000000016
                 <br><br>
-                <b>Analysis: </b> 
+                <b>Analysis: </b> Overall the results of the test support the alternative hypothesis, and my prediction, about page B having a lower time on page. The average value of time on B was less than time on A, and the p-value was extremely low suggesting that there was a statistically significant difference between the time on the two sites. 
+                <br>Based on this, we can reject the null hypothesis in favor of the alternative hypothesis that the time spent on page A is greater than page B. 
+
             </p>
             <h3>Time until First Click</h3>
             <p>
                 I used a one-tailed t-test to analyze the difference between time to first click on site A and site B because time is a continuous variable and my alternative hypothesis was that time to first click on B would be smaller. Therefore, since I wasn't just looking at if the two were different, I was also testing if one was smaller, so the one-tailed test made the most sense.
                 <br><br>
-                <b>Avg(A):  </b>5,675.461 milliseconds
+                <b>Avg(A): </b> 14,476.875 milliseconds
                 <br><br>
-                <b>Avg(B): </b> 14,476.875 milliseconds
+                <b>Avg(B):  </b>5,675.461 milliseconds
                 <br><br>
-                <b>Variance(A):  </b>8,568,394.258
+                <b>Std(A): </b>8,408.1 milliseconds
                 <br><br>
-                <b>Variance(B): </b>70,695,020.29
+                <b>Std(B):  </b>2,927.2 milliseconds
                 <br><br>
                 <b>T-Score:  </b>-4.863
                 <br><br>
                 <b>P-value (B less than A): </b>0.000019
                 <br><br>
-                <b>Analysis: </b> 
+                <b>Analysis: </b> Overall the results of the test support the alternative hypothesis, and my prediction, about page B having a lower time before first click. The average value of time before first click on page A was 14,276 milliseconds, while it was  only 5,675 milliseconds on page B. The P-value was extremely low, significantly below .05, suggesting that there is a statistically significant difference between the time before first click the two sites. <br>Based on this, we can reject the null hypothesis in favor of the alternative hypothesis that the time before first click on page A is significantly greater than page B. 
+            </p>
+            <h3>Summary Statistics</h3>
+            <table>
+                <tr>
+                  <th></th>
+                  <th>Version A</th>
+                  <th>Version B</th>
+                </tr>
+                <tr>
+                  <th>Misclick Rate</th>
+                  <td>.5</td>
+                  <td>.1</td>
+                </tr>
+                <tr>
+                  <th>Avg Time on Page</tj>
+                  <td>36,139.46 ms</td>
+                  <td>9,164.61 ms</td>
+                </tr>
+                <tr>
+                    <th>Time on Page Std</tj>
+                    <td>14,570.9 ms</td>
+                    <td>3,176.9 ms</td>
+                  </tr>
+                <tr>
+                  <th>Avg Time to 1st Click</th>
+                  <td>14,476.87 ms</td>
+                  <td>5,675.46 ms</td> 
+                </tr>
+                <tr>
+                    <th>Time to 1st Click Std</th>
+                    <td>8,408.1 ms</td>
+                    <td>2,927.2 ms</td> 
+                  </tr>
+              </table>
+              <p>For this project we only collected 24 data points for page A and 23 for page B. In an ideal world we would gain more accurate results using larger quantities of data. 
+                <br>
+                The large standard deviation for both metrics of page A suggests a significant range in user ease of experience, while the lower range for page B implies a more consistent user experience. The standard deviation also highlights the stark difference between the pages times with page A requiring significantly more time. These findings  apply both to time on page, as well as time to first click. 
+              </p>
+              <h2>
+                Conclusion
+              </h2>
+              <p>All together the results of these tests allow me to reject all three of my null hypotheses in favor of my alternative hypotheses. Page B consistently outperformed page A in each of the chosen metrics, indicating that the changes applied in page B create a faster and more streamlined user experience, with fewer misclicks. 
             </p>
         </div>
     </body>
