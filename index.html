@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Redesign Handin</title>
+        <link rel="stylesheet" href="styles.css" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- <nav>
+            <ul class = "topnav">
+                <li><a href="https://www.opensourceshakespeare.org/">Original</a></li>
+                <li><a href="https://sitapawar.github.io/responsive_redesign/">Redesign</a></li>
+                <li><a href="https://github.com/sitapawar/responsive_redesign">Github</a></li>
+                <li class="titleText"><a class="titleText"href="#home">A/B Testing Hand In</a></li>
+            </ul>
+        </nav> -->
+        <div class = "mainText">
+            <h1>A/B Testing</h1>
+            <h2>Introduction</h2>
+            <p>I used A/B testing to evaluate the disparity in user experience between scheduling a medical appointment on the original MEDx site (referred to as version A) and scheduling one on an updated site (version B). Version B  incorporated alterations in font and button colors aimed at enhancing user experience and assessability. By monitoring user actions, duration, and clicks during the designated task of scheduling an appointment with Adam Ng on April 23rd in Morristown, I employed various statistical analyses to compare different metrics. 
+                <br>The objective was to determine whether a significant difference existed between the two sites and to identify which site outperformed the other in the selected metrics.
+            </p>
+            <img src="assets/medXA.png" alt="Original Site (Version A)">
+            <p class ="imgLabel">Original Site (Version A)</p>
+            <img src="assets/MedXB.png" alt="Updated Site (Version B)">
+            <p class ="imgLabel">Updated Site (Version B)</p>
+            <h2>Hypothoses</h2>
+            <p>For this analysis I compared 3 metrics: 
+                <br>
+                <br>
+                <b>Misclick rate: </b>  the frequency with which users click something else on the page before finding the correct button for the task
+                <br>
+                <b>Time on Page: </b>  time spent on the webpage for each user group (milliseconds). The page closes once the user succeeds in the assigned task of scheduling the appointment, so this can also be used to track the time it took to perform the task.
+                <br>
+                <b>Time to First Click: </b>  time before the first click on the page for each user group (milliseconds)
+            </p>
+            <h3>Misclick Rate</h3>
+            <p>
+                <b>Null Hypothesis: </b>There is no difference between the misclick rate of page A and page B
+                <br><br>
+                <b>Alternative Hypothesis: </b>The misclick rate of page A is higher than page B
+                <br><br>
+                <b>Prediction: </b> I predict that we will find statistically significant evidence that the alternative hypothesis is true and the misclick rate of page A is different from that of page B. 
+                By changing the colors of the “See Appointment” button and the “Schedule Appointment” users are less likely to accidentally hit the wrong button when scheduling the appointment, this seems likely to reduce the misclick rate, making page B's rate lower than that of page A.
+            </p>
+            <h3>Time on Page</h3>
+            <p>
+                <b>Null Hypothesis: </b>There is no difference between the time on page A and page B
+                <br><br>
+                <b>Alternative Hypothesis: </b>The time spent on page A is higher than page B
+                <br><br>
+                <b>Prediction: </b> I predict that we will find statistically significant evidence that the alternative hypothesis is true and the time spent on page A will be higher than B. 
+                Since the text color has a higher contrast against the background, the text is more readable and should take less time to read. Additionally the differently colored buttons can make finding the correct button easier and faster. Based on these reasons, it seems likely it would take less time to succeed in the task when on page B and therefore less time would be spent on the page.
+            </p>
+            <h3>Time to First Click</h3>
+            <p>
+                I chose time to first click as my third metric since this can indicate how intuitive your site is on its initial load. Additionally, this can be an interesting metric to compare to the mislick rate and provide a lot more information. If both time to first click is high and mislick rate then it would suggest that the wrong button is the intuitive first move, however, other variations could provide other suggestions about what fixes are needed. 
+                <br><br>
+                <b>Null Hypothesis: </b>There is no difference between the time to first click on page A and page B
+                <br><br>
+                <b>Alternative Hypothesis: </b>The time to first click on page A is higher than page B
+                <br><br>
+                <b>Prediction: </b> I predict that we will find statistically significant evidence that the alternative hypothesis is true and the time to first click on page A will be higher than B. 
+                The alternative hypothesis hypothesis is likely to be true because with more readable text, people should spend less time trying to read the text and are more likely to click faster. 
+
+            </p>
+            <h2>Statistical Analysis</h2>
+            <h3>Misclick Rate</h3>
+            <p>
+                I used a chi-squared test to analyze misclick rate since it relies on categorical (in this case Boolean) data on whether or not the user misclicked.
+                <br><br>
+                <b>Chi^2 Value:  </b>8.7912
+                <br><br>
+                <b>P-Value: </b>0.003
+                <br><br>
+                <b>Analysis: </b> This statistical analysis supported my initial prediction and made me confident that page B had a significantly lower misclick rate. Since the p-value was less than .005, it is statistically significant and allows us to reject the null hypothesis in favor of the alternate hypthesis. Since the calculated misclick rate is 50% for site A and only 11% for site B, suggesting that not only is there a statistical difference between the two site, but that site A has a high misclick rate. The chi-squared value of 8.7912 supports a highest magnitude of deviation which also supports the theory that there is a significant difference between the frequencies on the two sites. <br>All together this allows us to reject the null hypothesis in favor of the alternate one, additionally suggesting that the mislick rate of page A is higher than page B. 
+            </p>
+            <h3>Time on Page</h3>
+            <p>
+                I used a one-tailed t-test to analyze the difference between time on site A and site B because time is a continuous variable and my alternative hypothesis was that time on B would be smaller. Therefore, since I wasn't just looking at if the two were different, I was also testing if one was smaller, so the one-tailed test made the most sense.
+                <br><br>
+                <b>Avg(A):  </b>9,164.615 milliseconds
+                <br><br>
+                <b>Avg(B): </b>3,6139.458 milliseconds
+                <br><br>
+                <b>Variance(A):  </b>10,093,158.01
+                <br><br>
+                <b>Variance(B): </b>212,313,712.7
+                <br><br>
+                <b>T-Score:  </b>-8.8766
+                <br><br>
+                <b>P-value (B less than A): </b>0.0000000016
+                <br><br>
+                <b>Analysis: </b> 
+            </p>
+            <h3>Time until First Click</h3>
+            <p>
+                I used a one-tailed t-test to analyze the difference between time to first click on site A and site B because time is a continuous variable and my alternative hypothesis was that time to first click on B would be smaller. Therefore, since I wasn't just looking at if the two were different, I was also testing if one was smaller, so the one-tailed test made the most sense.
+                <br><br>
+                <b>Avg(A):  </b>5,675.461 milliseconds
+                <br><br>
+                <b>Avg(B): </b> 14,476.875 milliseconds
+                <br><br>
+                <b>Variance(A):  </b>8,568,394.258
+                <br><br>
+                <b>Variance(B): </b>70,695,020.29
+                <br><br>
+                <b>T-Score:  </b>-4.863
+                <br><br>
+                <b>P-value (B less than A): </b>0.000019
+                <br><br>
+                <b>Analysis: </b> 
+            </p>
+        </div>
+    </body>
+</html>
